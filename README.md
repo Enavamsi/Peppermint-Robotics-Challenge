@@ -1,6 +1,7 @@
 # Color-Based Visual Servoing for TurtleBot3 (`color_nav`)
 
 A complete ROS 2 (Humble) package that enables a TurtleBot3 Burger robot to autonomously detect, track, and approach a green sphere in a Gazebo Classic simulation environment. The system fuses camera perception (HSV segmentation) with 2-D LiDAR proximity sensing to achieve safe, closed-loop navigation.
+<img width="1179" height="754" alt="image" src="https://github.com/user-attachments/assets/b4667187-111e-4e8a-b249-e5ab9b1cbd0c" />
 
 ---
 
@@ -214,6 +215,9 @@ angular.z = 0.0
 ---
 
 ## 2.5 LiDAR Proximity Fusion (Safety Gate)
+
+<img width="1237" height="711" alt="image" src="https://github.com/user-attachments/assets/0ef9fc82-ded1-46e7-9f01-bdcc631c28d5" />
+
 
 The monocular camera cannot estimate true depth, so LiDAR is fused as a safety layer.
 
