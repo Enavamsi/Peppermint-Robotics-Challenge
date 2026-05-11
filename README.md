@@ -24,3 +24,11 @@ This package is tested and designed for:
 sudo apt update
 sudo apt install ros-humble-turtlebot3* ros-humble-gazebo-ros-pkgs
 pip3 install opencv-python numpy
+
+Installation
+Create a ROS 2 workspace (if you don't already have one) and clone the repository:
+
+Bash
+mkdir -p ~/turtlebot3_ws/src
+cd ~/turtlebot3_ws/src
+git clone [https://github.com/YourUsername/Your-Repository-Name.git](https://github.com/YourUsername/Your-Repository-Name.git)
