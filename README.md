@@ -260,7 +260,7 @@ safe_distance = 2.5
 ```bash
 mkdir -p ~/peppermint_ws/src
 cd ~/peppermint_ws/src
-git clone <repository_url> color_nav
+git clone (https://github.com/Enavamsi/Peppermint-Robotics-Challenge.git)
 ```
 
 ---
