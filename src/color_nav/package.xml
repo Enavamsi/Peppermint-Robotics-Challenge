@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+            schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+
+  <name>color_nav</name>
+  <version>1.0.0</version>
+
+  <description>
+    Colour-based visual servoing for TurtleBot3 (ROS 2 Humble / Gazebo Classic).
+
+    The package provides a single unified node — VisualServoing — that:
+      • Subscribes to /camera/image_raw and performs real-time HSV colour
+        segmentation to locate a green target sphere.
+      • Uses a proportional (P) controller to align the robot with the target
+        centroid and drives forward when alignment is within threshold.
+      • Subscribes to /scan (LiDAR) to perform proximity-based safety stops.
+      • Publishes velocity commands on /cmd_vel.
+
+    Also ships a Gazebo Classic world (green_sphere.world) and a ready-to-use
+    launch file that brings up the full simulation stack.
+
+    Designed for robotic evaluation pipelines — no external subpackages required.
+  </description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+  <url type="repository">https://github.com/your-org/color_nav</url>
+
+  <!-- ───── Build ───── -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ───── Runtime ───── -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>python3-opencv</depend>
+  <depend>python3-numpy</depend>
+
+  <!-- ───── Launch / Simulation ───── -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>turtlebot3_gazebo</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+
+  <!-- ───── Test ───── -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>pytest</test_depend>
+  <test_depend>pytest-mock</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>
