@@ -16,7 +16,7 @@
         centroid and drives forward when alignment is within threshold.
       • Subscribes to /scan (LiDAR) to perform proximity-based safety stops.
       • Publishes velocity commands on /cmd_vel.
-
+ 
     Also ships a Gazebo Classic world (green_sphere.world) and a ready-to-use
     launch file that brings up the full simulation stack.
 
